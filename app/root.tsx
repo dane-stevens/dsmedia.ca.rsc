@@ -29,11 +29,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script async defer data-domain="dsmedia.ca" src="/js/script.js" />
+        {/* <script async src="https://dsmedia-plausible-proxy.ds-media.workers.dev/js/script.js"></script>
+        <script>
+          window.plausible=window.plausible||function(){(plausible.q = plausible.q || []).push(arguments)},plausible.init=plausible.init||function(i){plausible.o = i || {}};
+          plausible.init({
+            endpoint: "https://your-worker-name.your-cloudflare-zone.workers.dev/api/event"
+  });
+        </script> */}
         <Meta />
         <Links />
       </head>
-      <body className="w-dvw h-dvh">
+      <body className="w-full h-dvh">
         {children}
         <ScrollRestoration />
         <Scripts />

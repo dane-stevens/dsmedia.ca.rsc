@@ -78,11 +78,11 @@ export default function Home(props) {
             DS Media
           </div>
         </div>
-        <div className="mt-16 text-2xl text-balance text-center">
+        <div className="mt-24 text-2xl text-balance text-center">
           We build specialized web applications with complex logic requirements
         </div>
         <div>
-          <h2 className="text-lg mt-16">
+          <h2 className="text-lg mt-24">
             Get in touch
           </h2>
           {

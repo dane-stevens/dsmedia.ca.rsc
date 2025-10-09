@@ -17,7 +17,9 @@ export function loader({ request }: Route.LoaderArgs) {
   console.log(Object.fromEntries(request.headers))
   return {
     ip: request.headers.get('CF-Connecting-IP'),
-    ipv6: request.headers.get('CF-Connecting-IPv6')
+    ipv6: request.headers.get('CF-Connecting-IPv6'),
+    cf_ray: request.headers.get('cf-ray'),
+    cf_ipcountry: request.headers.get('cf-ipcountry'),
   }
 }
 
@@ -40,6 +42,12 @@ export default function Timestamp(props: Route.ComponentProps) {
         </div>
         <div className="flex items-center gap-2">
           Your IPv6 address: <Copy>{props.loaderData.ipv6}</Copy>
+        </div>
+        <div className="flex items-center gap-2">
+          CF Ray: <Copy>{props.loaderData.cf_ray}</Copy>
+        </div>
+        <div className="flex items-center gap-2">
+          CF Country: <Copy>{props.loaderData.cf_ipcountry}</Copy>
         </div>
 
       </div>

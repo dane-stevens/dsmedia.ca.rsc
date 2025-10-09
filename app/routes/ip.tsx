@@ -14,6 +14,7 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export function loader({ request }: Route.LoaderArgs) {
+  console.log(Object.fromEntries(request.headers))
   return {
     ip: request.headers.get('CF-Connecting-IP'),
     ipv6: request.headers.get('CF-Connecting-IPv6')

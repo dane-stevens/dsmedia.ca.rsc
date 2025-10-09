@@ -40,9 +40,9 @@ export default function Timestamp(props: Route.ComponentProps) {
         <div className="flex items-center gap-2">
           Your IP address: <Copy>{props.loaderData.ip}</Copy>
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           Your IPv6 address: <Copy>{props.loaderData.ipv6}</Copy>
-        </div>
+        </div> */}
         <div className="flex items-center gap-2">
           CF Ray: <Copy>{props.loaderData.cf_ray}</Copy>
         </div>

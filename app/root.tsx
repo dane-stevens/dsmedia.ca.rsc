@@ -71,20 +71,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="w-full h-dvh">
-        <header>
-          <nav>
-            <ul className="flex items-center justify-center gap-4 mt-8">
-              <li><NavLink to='/'>Home</NavLink></li>
-              <SubNav title="Tools">
-                <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
-                <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
-                <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
-              </SubNav>
-            </ul>
-          </nav>
-        </header>
-        {children}
+      <body className="w-full min-h-dvh flex flex-col justify-between">
+        <div>
+          <header>
+            <nav>
+              <ul className="flex items-center justify-center gap-4 mt-8">
+                <li><NavLink to='/'>Home</NavLink></li>
+                <SubNav title="Tools">
+                  <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
+                  <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
+                  <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
+                </SubNav>
+              </ul>
+            </nav>
+          </header>
+          <main>
+            {children}
+          </main>
+        </div>
         <footer className="text-center text-xs mt-16 text-gray-500 pb-16">
           &copy; {new Date().getFullYear()} DS Media. All rights reserved.
         </footer>

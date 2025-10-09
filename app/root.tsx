@@ -42,11 +42,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script async src="https://plausible.io/js/pa-ZdlSzDV3JTwCgMD1B2J1u.js"></script>
+        <script async src="/pl/js/script.js"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
           window.plausible=window.plausible||function(){(plausible.q = plausible.q || []).push(arguments)},plausible.init=plausible.init||function(i){plausible.o = i || {}};
-          plausible.init()
+          plausible.init({
+            endpoint: "/pl/api/event"
+          });
         `}} />
         <Meta />
         <Links />

@@ -30,13 +30,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <script async src="https://dsmedia-plausible-proxy.ds-media.workers.dev/js/script.js"></script>
-        <script>
+        <script async src="https://plausible.io/js/pa-ZdlSzDV3JTwCgMD1B2J1u.js"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
           window.plausible=window.plausible||function(){(plausible.q = plausible.q || []).push(arguments)},plausible.init=plausible.init||function(i){plausible.o = i || {}};
-          plausible.init({
-            endpoint: "https://your-worker-name.your-cloudflare-zone.workers.dev/api/event"
-  });
-        </script> */}
+          plausible.init()
+        `}} />
         <Meta />
         <Links />
       </head>

@@ -45,7 +45,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <nav>
             <ul className="flex items-center justify-center gap-4 mt-8">
               <li><NavLink to='/'>Home</NavLink></li>
-              <li><NavLink to='/generator'>Generator</NavLink></li>
+              <li><NavLink to='/id-generator'>ID Generator</NavLink></li>
+              <li><NavLink to='/json-formatter'>JSON Formatter</NavLink></li>
             </ul>
           </nav>
         </header>

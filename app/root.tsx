@@ -81,6 +81,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
                   <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
                   <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
+                  <li><NavLink to='/ip' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">IP</NavLink></li>
                 </SubNav>
               </ul>
             </nav>

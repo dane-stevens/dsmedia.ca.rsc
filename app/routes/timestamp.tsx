@@ -8,7 +8,7 @@ import { intlFormat } from 'date-fns'
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "ID Generator - DS Media" },
+    { title: "Timestamp - DS Media" },
     { name: "description", content: "DS Media" },
   ];
 }

@@ -6,10 +6,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { useEffect, useState } from "react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -36,6 +38,22 @@ export const links: Route.LinksFunction = () => [
   }
 ];
 
+function SubNav({ children, title }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location])
+  return (
+    <li className="group relative z-10" onClick={() => setIsOpen(!isOpen)}>
+      {title}
+      <ul className={`${isOpen ? '' : 'hidden'} group-hover:block group-active:block absolute bg-gray-900 rounded-lg overflow-hidden`}>
+        {children}
+      </ul>
+    </li>
+  )
+}
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -58,14 +76,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <nav>
             <ul className="flex items-center justify-center gap-4 mt-8">
               <li><NavLink to='/'>Home</NavLink></li>
-              <li className="group relative z-10">
-                Tools
-                <ul className="hidden group-hover:block group-active:block absolute bg-gray-900 rounded-lg overflow-hidden">
-                  <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
-                  <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
-                  <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
-                </ul>
-              </li>
+              <SubNav title="Tools">
+                <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
+                <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
+                <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
+              </SubNav>
             </ul>
           </nav>
         </header>

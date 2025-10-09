@@ -13,11 +13,13 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 export default function Timestamp() {
-  const [now, setNow] = useState(() => new Date())
+  const [now, setNow] = useState<Date | null>(null)
 
   useInterval(() => {
     setNow(new Date())
   }, 0)
+
+  if (!now) return null
 
   return (
     <div className="flex items-center justify-center px-8 py-16">

@@ -9,10 +9,12 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@date-fns/tz": "^1.4.1",
     "@iconify/react": "^6.0.2",
     "@paralleldrive/cuid2": "^2.2.2",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
+    "date-fns": "^4.1.0",
     "isbot": "^5.1.31",
     "js-beautify": "^1.15.4",
     "nanoid": "^5.1.6",

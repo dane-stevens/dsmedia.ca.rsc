@@ -109,9 +109,6 @@ export default function Home(props) {
           }
         </div>
         <Subprocessors />
-        <footer className="text-center text-xs mt-16 text-gray-500">
-          &copy; {new Date().getFullYear()} DS Media. All rights reserved.
-        </footer>
       </div>
     </div>
   )

@@ -58,12 +58,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <nav>
             <ul className="flex items-center justify-center gap-4 mt-8">
               <li><NavLink to='/'>Home</NavLink></li>
-              <li><NavLink to='/id-generator'>ID Generator</NavLink></li>
-              <li><NavLink to='/json-formatter'>JSON Formatter</NavLink></li>
+              <li className="group relative z-10">
+                Tools
+                <ul className="hidden group-hover:block group-active:block absolute bg-gray-900 rounded-lg overflow-hidden">
+                  <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
+                  <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
+                  <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </header>
         {children}
+        <footer className="text-center text-xs mt-16 text-gray-500 pb-16">
+          &copy; {new Date().getFullYear()} DS Media. All rights reserved.
+        </footer>
+
         <ScrollRestoration />
         <Scripts />
       </body>

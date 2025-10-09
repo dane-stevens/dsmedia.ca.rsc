@@ -35,8 +35,11 @@ export default function Timestamp(props: Route.ComponentProps) {
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-center text-xl mb-4">IP</h1>
 
-        <div>
-          Your IP address: {props.loaderData.ip}
+        <div className="flex items-center gap-2">
+          Your IP address: <Copy>{props.loaderData.ip}</Copy>
+        </div>
+        <div className="flex items-center gap-2">
+          Your IPv6 address: <Copy>{props.loaderData.ipv6}</Copy>
         </div>
 
       </div>

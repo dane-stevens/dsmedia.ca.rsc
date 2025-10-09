@@ -3,6 +3,12 @@ import { createId } from "@paralleldrive/cuid2";
 import { useEffect, useState } from "react";
 import { Copy } from "~/components/Copy";
 
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "ID Generator - DS Media" },
+    { name: "description", content: "DS Media" },
+  ];
+}
 export default function Generator() {
   const [id, setId] = useState(() => createId())
   const [prefix, setPrefix] = useState('')

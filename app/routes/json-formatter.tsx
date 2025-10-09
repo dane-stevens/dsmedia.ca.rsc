@@ -2,6 +2,12 @@ import { useState } from "react";
 import { Copy } from "~/components/Copy";
 import js_beautify from 'js-beautify'
 
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "JSON Formatter - DS Media" },
+    { name: "description", content: "DS Media" },
+  ];
+}
 function beautifyAndDisplay(json: object): void {
 
   // Beautify JSON with indentation

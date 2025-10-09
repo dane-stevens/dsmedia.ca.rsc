@@ -1,4 +1,6 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx"),
+export default [
+  index("routes/home.tsx"),
+  route('generator', "routes/generator.tsx")
 ] satisfies RouteConfig;

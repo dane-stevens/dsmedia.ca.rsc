@@ -42,12 +42,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script async src="/pl/js/script.js"></script>
+        <script async src="https://dsmedia-plausible-proxy.ds-media.workers.dev/pl/js/script.js"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
           window.plausible=window.plausible||function(){(plausible.q = plausible.q || []).push(arguments)},plausible.init=plausible.init||function(i){plausible.o = i || {}};
           plausible.init({
-            endpoint: "/pl/api/event"
+            endpoint: "https://dsmedia-plausible-proxy.ds-media.workers.dev/pl/api/event"
           });
         `}} />
         <Meta />

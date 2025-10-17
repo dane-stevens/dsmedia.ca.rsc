@@ -1,8 +1,8 @@
 <p align="center">
 <img src="./dsmedia.png" alt="DS Media Logo" style="width: 140px;"/>
 </p>
-<div align="center" style="font-size:36pt; text-align:center;">DS Media
-  </div>
+
+# DS Media
 
 Hello, I'm Dane. A Canadian full-stack web developer.
 

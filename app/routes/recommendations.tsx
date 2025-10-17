@@ -1,3 +1,11 @@
+import type { Route } from "./+types/recommendations";
+
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "Recommendations - DS Media" },
+    { name: "description", content: "DS Media" },
+  ];
+}
 const products = [
   {
     url: "https://amzn.to/3W8ayjd", title: 'Beelink SER9 Pro', image: "https://m.media-amazon.com/images/I/41dZ1FlexML._AC_SL1500_.jpg",

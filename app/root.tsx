@@ -64,7 +64,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div>
           <header>
             <nav>
-              <ul className="flex items-center justify-center gap-8 mt-8">
+              <ul className="flex items-center justify-center gap-8 mt-8 overflow-x-auto">
                 <li><NavLink to='/'>Home</NavLink></li>
                 <SubNav title="Tools">
                   <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>

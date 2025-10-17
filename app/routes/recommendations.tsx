@@ -55,7 +55,7 @@ export function ServerComponent() {
         <div className="flex gap-5 justify-center flex-wrap">
           {products?.map((product, i) => {
             return (
-              <a href={product.url} className="text-center block border border-zinc-800 px-4 py-8 rounded-lg w-full md:max-w-1/3 lg:max-w-1/4 xl:max-w-1/5 hover:border-emerald-600">
+              <a target="_blank" href={product.url} className="text-center block border border-zinc-800 px-4 py-8 rounded-lg w-full md:max-w-1/3 lg:max-w-1/4 xl:max-w-1/5 hover:border-emerald-600">
                 <div className="h-40 max-w-60 flex items-center justify-center bg-white rounded-lg p-4 mb-4 mx-auto">
                   <img src={product.image} alt={product.title} className="w-full h-full object-contain" />
                 </div>

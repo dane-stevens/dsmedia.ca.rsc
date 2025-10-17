@@ -1,5 +1,3 @@
-import { Icon } from "@iconify/react";
-import { createId } from "@paralleldrive/cuid2";
 import { useEffect, useState } from "react";
 import { Copy } from "~/components/Copy";
 import type { Route } from "./+types/timestamp";

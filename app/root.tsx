@@ -1,10 +1,10 @@
+
 import {
   isRouteErrorResponse,
   Links,
   Meta,
   NavLink,
   Outlet,
-  Scripts,
   ScrollRestoration,
   useLocation,
 } from "react-router";
@@ -12,6 +12,8 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import { useEffect, useState } from "react";
+import { SubNav } from "./components/SubNav";
+
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -38,21 +40,7 @@ export const links: Route.LinksFunction = () => [
   }
 ];
 
-function SubNav({ children, title }) {
-  const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
-  useEffect(() => {
-    setIsOpen(false)
-  }, [location])
-  return (
-    <li className="group relative z-10" onClick={() => setIsOpen(!isOpen)}>
-      {title}
-      <ul className={`${isOpen ? '' : 'hidden'} group-hover:block group-active:block absolute bg-gray-900 rounded-lg overflow-hidden`}>
-        {children}
-      </ul>
-    </li>
-  )
-}
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -93,15 +81,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <footer className="text-center text-xs mt-16 text-gray-500 pb-16">
           &copy; {new Date().getFullYear()} DS Media. All rights reserved.
         </footer>
-
         <ScrollRestoration />
-        <Scripts />
       </body>
     </html>
   );
 }
 
-export default function App() {
+export function ServerComponent() {
   return <Outlet />;
 }
 
@@ -122,11 +108,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="container p-4 pt-16 mx-auto">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className="overflow-x-auto p-4 w-full">
           <code>{stack}</code>
         </pre>
       )}

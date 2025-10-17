@@ -1,18 +1,20 @@
-# Welcome to React Router!
+# Welcome to React Router! (Experimental RSC)
 
-A modern, production-ready template for building full-stack React applications using React Router.
+⚠️ **EXPERIMENTAL**: This template demonstrates React Server Components with React Router. This is experimental technology and not recommended for production use.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern template for exploring React Server Components (RSC) with React Router, powered by Vite.
 
 ## Features
 
-- 🚀 Server-side rendering
+- 🧪 **Experimental React Server Components**
+- 🚀 Server-side rendering with RSC
 - ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
+- 📦 Asset bundling and optimization with Vite
 - 🔄 Data loading and mutations
 - 🔒 TypeScript by default
 - 🎉 TailwindCSS for styling
 - 📖 [React Router docs](https://reactrouter.com/)
+- 📚 [React Server Components guide](https://reactrouter.com/how-to/react-server-components)
 
 ## Getting Started
 
@@ -42,41 +44,17 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
+## Running Production Build
 
-### Docker Deployment
-
-To build and run using Docker:
+Run the production server:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Understanding React Server Components
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+Learn more about React Server Components with React Router in our [comprehensive guide](https://reactrouter.com/how-to/react-server-components).
 
 ## Styling
 
@@ -84,4 +62,4 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router. 

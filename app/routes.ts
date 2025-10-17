@@ -6,4 +6,4 @@ export default [
   route('json-formatter', "routes/json-formatter.tsx"),
   route('timestamp', "routes/timestamp.tsx"),
   route('ip', "routes/ip.tsx"),
-] satisfies RouteConfig;
+] satisfies RouteConfig

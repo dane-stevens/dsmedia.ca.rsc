@@ -1,12 +1,11 @@
 import { Logo } from "~/logo";
 import type { Route } from "./+types/home";
-import { useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Icon } from "@iconify/react";
-import Turnstile from "~/components/Turnstile";
-import { Form } from "react-router";
 import z, { ZodError } from "zod";
 import { validateTurnstile } from "~/utils/turnstile.server";
 import { sendEmail } from "~/utils/resend.server";
+import { ContactForm } from "~/components/ContactForm";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -48,8 +47,6 @@ export async function action({ request }: Route.ActionArgs) {
     };
   }
 
-  console.log(data)
-
   await sendEmail({
     from: 'website@m.dsmedia.ca',
     to: 'dane@dsmedia.ca',
@@ -64,9 +61,7 @@ ${data.message}
   return { success: true }
 }
 
-export default function Home(props) {
-  const [turnstilePassed, setTurnstilePassed] = useState(false)
-  const { success } = props.actionData || {}
+export function ServerComponent() {
   return (
     <div className="mx-auto max-w-screen-md py-16 px-8">
       <div>
@@ -85,28 +80,7 @@ export default function Home(props) {
           <h2 className="text-lg mt-24">
             Get in touch
           </h2>
-          {
-            success ? (
-              <div className="border rounded-lg border-emerald-200 bg-emerald-950 p-4 text-center text-emerald-200">Thank you for getting in touch</div>
-            ) : (
-              <Form method="POST" className="flex flex-col gap-2">
-
-                <input type="text" name="name" placeholder="Your name" className="border border-zinc-800 rounded-lg py-2 indent-4" />
-                <input type="email" name="email" placeholder="Your email" className="border border-zinc-800 rounded-lg py-2 indent-4" />
-                <textarea name="message" className="border border-zinc-800 rounded-lg py-2 px-4 w-full" rows={4} placeholder="How can we help?"></textarea>
-                <Turnstile
-                  sitekey="0x4AAAAAAB5hhuF0Buue1-HF"
-                  onVerify={(token) => {
-                    setTurnstilePassed(true);
-                  }}
-                  size="flexible"
-                  theme="dark"
-                  className="turnstile"
-                />
-                <button type="submit" disabled={!turnstilePassed} className="rounded-lg bg-emerald-400 text-emerald-950 p-4 hover:bg-emerald-500 cursor-pointer">Send Message</button>
-              </Form>
-            )
-          }
+          <ContactForm />
         </div>
         <Subprocessors />
       </div>

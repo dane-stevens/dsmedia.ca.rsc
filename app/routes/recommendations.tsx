@@ -20,7 +20,14 @@ const products = [
     title: "Logitech MX Keys S",
     image: "https://m.media-amazon.com/images/I/71G7uXAb9BL._AC_SL1500_.jpg",
     description: `Logitech MX Keys S Wireless Keyboard, Low Profile, Fluid Precise Quiet Typing, Programmable Keys, Backlighting, Bluetooth, USB C Rechargeable, for Windows PC, Linux, Chrome, Mac - Graphite`
+  },
+  {
+    url: "https://amzn.to/42OE3u1",
+    title: "NB North Bayou Monitor Mount",
+    image: "https://m.media-amazon.com/images/I/51FvgCU1lCL._AC_SL1500_.jpg",
+    description: `NB North Bayou Monitor Mount,Fits 17-30" or Bigger Computer Monitors(Within 19.8lbs), Adjustable Stand with Tilt Rotation Swivel Function, Desk Mount F80`
   }
+
 
 
 ]
@@ -33,12 +40,16 @@ export function ServerComponent() {
           <div className="text-sm text-zinc-300 border-dashed border rounded-lg border-zinc-700 px-4 py-2">As an Amazon Associate I earn from qualifying purchases.</div>
         </div>
 
+        <h2 className="text-center text-4xl">Premium Setup</h2>
+        <p className="text-center text-zinc-400 max-w-2xl mx-auto text-balance">
+          This premium setup has a powerful mini PC, a 32" monitor, a delightful typing experience, and get's your monitor up off the desk with a gas spring mount for more space.
+        </p>
         <div className="flex gap-5 justify-center flex-wrap">
           {products?.map((product, i) => {
             return (
               <a href={product.url} className="text-center block border border-zinc-800 px-4 py-8 rounded-lg w-full md:max-w-1/3 lg:max-w-1/4 xl:max-w-1/5 hover:border-emerald-600">
                 <div className="h-40 max-w-60 flex items-center justify-center bg-white rounded-lg p-4 mb-4 mx-auto">
-                  <img src={product.image} alt={product.title} className=" max-w-full max-h-full" />
+                  <img src={product.image} alt={product.title} className="w-full h-full object-contain" />
                 </div>
                 <h2 className="font-semibold mb-2">{product.title}</h2>
                 <p className="text-sm text-zinc-400">{product.description}</p>

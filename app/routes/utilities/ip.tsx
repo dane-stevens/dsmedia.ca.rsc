@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Copy } from "~/components/Copy";
 import type { Route } from "./+types/ip";
 import { useInterval } from "~/hooks/interval";
+import { H1 } from "~/components/Headings";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -25,7 +26,7 @@ export function ServerComponent(props: Route.ComponentProps) {
   return (
     <div className="flex items-center justify-center px-8 py-16">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-center text-xl mb-4">IP</h1>
+        <H1>What's My IP?</H1>
 
         <div className="flex items-center gap-2">
           Your IP address: <Copy>{props.loaderData.ip}</Copy>

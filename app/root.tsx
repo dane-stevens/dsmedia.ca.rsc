@@ -1,5 +1,6 @@
 
 import {
+  href,
   isRouteErrorResponse,
   Links,
   Meta,
@@ -66,13 +67,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <nav>
               <ul className="flex items-center justify-center-safe gap-8 mt-8  mx-8 pb-4" style={{ scrollSnapAlign: 'start' }}>
                 <li><NavLink to='/'>Home</NavLink></li>
-                <SubNav title="Tools">
-                  <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
-                  <li><NavLink to='/json-formatter' className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
-                  <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
-                  <li><NavLink to='/ip' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">IP</NavLink></li>
+                <SubNav title="Utilities">
+                  <li><NavLink to={href('/utilities/id-generator/:type?')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
+                  <li><NavLink to={href('/utilities/json-formatter')} className="px-4 py-2 whitespace-nowrap hover:bg-gray-800 block">JSON Formatter</NavLink></li>
+                  <li><NavLink to={href('/utilities/timestamp')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
+                  <li><NavLink to={href('/utilities/whats-my-ip')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">What's My IP?</NavLink></li>
                 </SubNav>
-                <li><NavLink to='/recommendations'>Recommendations</NavLink></li>
+                <SubNav title="Toolkit">
+                  <li><NavLink to={href('/toolkit/web-services')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Web Services</NavLink></li>
+                  <li><NavLink to={href('/toolkit/hardware')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Recommended Hardware</NavLink></li>
+                </SubNav>
                 <li className="hidden md:block">
                   <a href="https://github.com/dane-stevens/dsmedia.ca.rsc" className="flex items-center gap-1"><Icon icon='mdi:github' className="size-5 text-zinc-500" />GitHub</a>
                 </li>

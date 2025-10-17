@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Copy } from "~/components/Copy";
 import js_beautify from 'js-beautify'
+import { H1 } from "~/components/Headings";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -44,7 +45,7 @@ export default function Generator() {
   return (
     <div className="flex items-center justify-center px-8 py-16">
       <div className="flex flex-col items-center justify-center w-full max-w-screen-xl">
-        <h1 className="text-center text-xl mb-4">JSON Formatter</h1>
+        <H1>JSON Formatter</H1>
         <div className="grid grid-cols-2 w-full">
           <div>
             <textarea value={code} rows={20} placeholder="Enter your JSON" className="border border-zinc-800 rounded-l-lg px-4 py-2 w-full h-full" onChange={(e) => setCode(e.target.value)}>

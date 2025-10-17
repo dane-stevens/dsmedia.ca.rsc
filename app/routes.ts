@@ -2,9 +2,11 @@ import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 export default [
   index("routes/home.tsx"),
-  route('id-generator/:type?', "routes/id-generator.tsx"),
-  route('json-formatter', "routes/json-formatter.tsx"),
-  route('timestamp', "routes/timestamp.tsx"),
-  route('ip', "routes/ip.tsx"),
-  route('recommendations', "routes/recommendations.tsx"),
+  route('utilities/id-generator/:type?', "routes/utilities/id-generator.tsx"),
+  route('utilities/json-formatter', "routes/utilities/json-formatter.tsx"),
+  route('utilities/timestamp', "routes/utilities/timestamp.tsx"),
+  route('utilities/whats-my-ip', "routes/utilities/ip.tsx"),
+
+  route('toolkit/hardware', "routes/toolkit/hardware.tsx"),
+  route('toolkit/web-services', "routes/toolkit/web-services.tsx"),
 ] satisfies RouteConfig

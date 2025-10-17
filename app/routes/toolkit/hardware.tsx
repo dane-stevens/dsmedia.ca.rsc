@@ -1,4 +1,5 @@
-import type { Route } from "./+types/recommendations";
+import { H1 } from "~/components/Headings";
+import type { Route } from "./+types/hardware";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -44,6 +45,9 @@ export function ServerComponent() {
   return (
     <div className="flex items-center justify-center px-8 py-16">
       <div className="flex flex-col gap-8">
+
+        <H1>Hardware We Recommend</H1>
+
         <div className="flex justify-center mb-8">
           <div className="text-sm text-zinc-300 border-dashed border rounded-lg border-zinc-700 px-4 py-2">As an Amazon Associate I earn from qualifying purchases.</div>
         </div>

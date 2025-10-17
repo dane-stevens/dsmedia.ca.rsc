@@ -1,3 +1,4 @@
+import { H1 } from "~/components/Headings";
 import type { Route } from "./+types/id-generator";
 import { IDGenerator } from "~/components/IDGenerator";
 
@@ -11,7 +12,7 @@ export default function Generator() {
   return (
     <div className="flex items-center justify-center px-8 py-16">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-center text-xl mb-4">Cuid2 Generator</h1>
+        <H1>Cuid2 Generator</H1>
         <IDGenerator />
         <div className="flex flex-col gap-8 mt-32 text-zinc-300">
           <div>

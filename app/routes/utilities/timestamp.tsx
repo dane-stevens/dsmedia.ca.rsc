@@ -3,6 +3,7 @@ import { Copy } from "~/components/Copy";
 import type { Route } from "./+types/timestamp";
 import { useInterval } from "~/hooks/interval";
 import { intlFormat } from 'date-fns'
+import { H1 } from "~/components/Headings";
 
 export function meta({ }: Route.MetaArgs) {
   return [
@@ -22,7 +23,7 @@ export default function Timestamp() {
   return (
     <div className="flex items-center justify-center px-8 py-16">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-center text-xl mb-4">Timestamp</h1>
+        <H1>Timestamp</H1>
 
         <pre>
           <Copy>

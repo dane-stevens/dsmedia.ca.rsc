@@ -73,7 +73,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li><NavLink to='/ip' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">IP</NavLink></li>
                 </SubNav>
                 <li><NavLink to='/recommendations'>Recommendations</NavLink></li>
-                <li>
+                <li className="hidden md:block">
                   <a href="https://github.com/dane-stevens/dsmedia.ca.rsc" className="flex items-center gap-1"><Icon icon='mdi:github' className="size-5 text-zinc-500" />GitHub</a>
                 </li>
               </ul>

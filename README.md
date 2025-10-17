@@ -1,7 +1,7 @@
-<span style="margin:0 auto;">
+<p align="center">
 <img src="./dsmedia.png" alt="DS Media Logo" style="width: 140px;"/>
   <h1 style="font-size:36pt;">DS Media</h1>
-</span>
+</p>
 
 Hello, I'm Dane. A Canadian full-stack web developer.
 

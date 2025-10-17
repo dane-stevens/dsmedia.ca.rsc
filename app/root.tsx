@@ -13,6 +13,7 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import { useEffect, useState } from "react";
 import { SubNav } from "./components/SubNav";
+import { Icon } from "@iconify/react";
 
 
 export const links: Route.LinksFunction = () => [
@@ -63,7 +64,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <div>
           <header>
             <nav>
-              <ul className="flex items-center justify-center gap-4 mt-8">
+              <ul className="flex items-center justify-center gap-8 mt-8">
                 <li><NavLink to='/'>Home</NavLink></li>
                 <SubNav title="Tools">
                   <li><NavLink to='/id-generator' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">ID Generator</NavLink></li>
@@ -71,6 +72,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li><NavLink to='/timestamp' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Timestamp</NavLink></li>
                   <li><NavLink to='/ip' className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">IP</NavLink></li>
                 </SubNav>
+                <li>
+                  <a href="https://github.com/dane-stevens/dsmedia.ca.rsc" className="flex items-center gap-1"><Icon icon='mdi:github' className="size-5 text-zinc-500" />GitHub</a>
+                </li>
               </ul>
             </nav>
           </header>

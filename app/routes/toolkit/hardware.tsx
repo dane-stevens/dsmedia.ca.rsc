@@ -1,9 +1,10 @@
 import { H1 } from "~/components/Headings";
 import type { Route } from "./+types/hardware";
+import { Container } from "~/components/Container";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "Recommendations - DS Media" },
+    { title: "Recommended Hardware - DS Media" },
     { name: "description", content: "DS Media" },
   ];
 }
@@ -43,7 +44,7 @@ const products = [
 
 export function ServerComponent() {
   return (
-    <div className="flex items-center justify-center px-8 py-16">
+    <Container>
       <div className="flex flex-col gap-8">
 
         <H1>Hardware We Recommend</H1>
@@ -70,6 +71,6 @@ export function ServerComponent() {
           })}
         </div>
       </div>
-    </div>
+    </Container>
   )
 }

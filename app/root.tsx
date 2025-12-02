@@ -76,6 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <SubNav title="Toolkit">
                   <li><NavLink to={href('/toolkit/web-services')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Web Services</NavLink></li>
                   <li><NavLink to={href('/toolkit/hardware')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Recommended Hardware</NavLink></li>
+                  <li><NavLink to={href('/toolkit/open-source-software')} className="px-4 py-2 whitespace-nowrap  hover:bg-gray-800 block">Open Source Software</NavLink></li>
                 </SubNav>
                 <li className="hidden md:block">
                   <a href="https://github.com/dane-stevens/dsmedia.ca.rsc" className="flex items-center gap-1"><Icon icon='mdi:github' className="size-5 text-zinc-500" />GitHub</a>

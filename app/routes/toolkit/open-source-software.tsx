@@ -51,6 +51,12 @@ export function ServerComponent() {
             description="The free and flexible app for your private thoughts."
             url="https://obsidian.md/"
           />
+          <Software
+            name="wallabag"
+            description="Save and classify articles. Read them later. Freely."
+            url="https://wallabag.org"
+            deploy="https://railway.com/deploy/wallabag?referralCode=dsmedia&utm_medium=integration&utm_source=template&utm_campaign=generic"
+          />
         </Section>
 
         <Section title="Backup & Sync">
@@ -124,13 +130,15 @@ function Software({
   description,
   url,
   icon,
-  offer
+  offer,
+  deploy
 }: {
   name: ReactNode;
   description: ReactNode;
   url: string;
   icon?: string | ReactNode;
   offer?: string
+  deploy?: string
 }) {
   return (
     <li className="border border-zinc-800 rounded-lg p-4">
@@ -164,6 +172,14 @@ function Software({
       {offer && <div className="text-xs text-zinc-500 mt-2 text-center md:text-left">
         <span className="rounded-lg border border-emerald-600 bg-emerald-950 text-emerald-200 px-1 mr-2">Affiliate</span>
         {offer}</div>}
+      {deploy &&
+        <div className="flex">
+          <a target="_blank" rel="noopener noreferrer" className="cursor-pointer mt-4 flex gap-2 items-center text-sm px-4 py-2 rounded-lg bg-[rgb(133,59,206)] hover:bg-[rgb(166,103,228)]" href={deploy}>
+            <img src="https://railway.com/brand/logo-light.svg" className="size-5" />
+            Deploy on Railway</a>
+        </div>
+      }
+
     </li>
   );
 }

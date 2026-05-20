@@ -10,4 +10,7 @@ export default [
   route('toolkit/hardware', "routes/toolkit/hardware.tsx"),
   route('toolkit/web-services', "routes/toolkit/web-services.tsx"),
   route('toolkit/open-source-software', "routes/toolkit/open-source-software.tsx"),
+
+
+  route('uses', "routes/uses.tsx"),
 ] satisfies RouteConfig
